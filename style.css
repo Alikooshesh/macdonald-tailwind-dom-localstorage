@@ -1,0 +1,45 @@
+body{
+    width: 100%;
+    min-height: 100vh;   
+    background-image:-webkit-linear-gradient(left, orange, red);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.restaurant{
+    box-shadow: 0 2px 1px rgba(0,0,0,0.09), 0 8px 4px rgba(0,0,0,0.09), 0 16px 8px rgba(0,0,0,0.09), 0 32px 16px rgba(0,0,0,0.09);
+}
+#pay{
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width:1024px){
+
+::-webkit-scrollbar {
+    width: 13px;
+}
+  ::-webkit-scrollbar-thumb {
+    background: gray; 
+    border-radius: 10px;
+}
+
+ #food-list > div {
+    direction: ltr;
+   
+}
+.food{
+    direction:rtl ;
+ } 
+.cost-sum , .no-wrap{
+    white-space:nowrap;
+} 
+.wrapper-food-list{
+    margin-left: auto;
+    margin-right: auto;
+}  
+}
+
+
+ 

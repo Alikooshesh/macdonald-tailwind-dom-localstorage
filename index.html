@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant menue</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="py-[20px]">
+    <div class=" w-[100%] max-h-[100%] px-[20px] 2xl:relative ">
+        <div
+            class="wrapper-food-list w-[100%] max-h-[100%]  rounded-tl-[20px] rounded-tr-[20px] lg:max-w-[1024px] lg:h-[630px]  bg-[#E8EFF6] 2xl:w-[960px] 2xl:inline-block 2xl:absolute 2xl:right-[10px] 2xl:top-[30px]  2xl:p-0 2xl:rounded-[20px] 2xl:relative 2xl:mb-0 2xl:pb-0">
+            <div class="restaurant"
+                class=" w-[100%] h-[60px] bg-[#F0F8FF] m-0 rounded-tl-[20px] rounded-tr-[20px] 2xl:mb-0 2xl:pb-0">
+                <h1 class="text-center text-2xl font-extrabold py-[10px] ">رستوران مک دونالد شعبه اصفهان</h1>
+            </div>
+            <div id="food-list" class="w-[100%] max-h-[100%] lg:mb-[15px] lg:pr-[10px] lg:pt-[15px] 2xl:mb-0 2xl:pb-0">
+                <div id="food-item"
+                    class="h-[100%] w-[100%] py-[20px] px-[10px]  grid justify-evenly items-center grid-cols-1 gap-[15px] lg:overflow-y-scroll lg:h-[560px]  lg:max-h-[100%]  lg:grid lg:grid-cols-2 lg:justify-evenly lg:py-[10px] lg:px-[40px] lg:gap-[15px] 2xl:mb-0 2xl:pb-0">
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px] ">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px] ">
+                                <img src="./1.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">همبرگر معمولی</p>
+                                <p>8000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px] ">
+                                <img src="./1.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">همبرگر مخصوص</p>
+                                <p>10000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button  
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px]">
+                                <img src="./1.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">همبرگر معمولی با قارچ و پنیر</p>
+                                <p>10000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button 
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px]">
+                                <img src="./1.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">همبرگر مخصوص با قارچ و پنیر</p>
+                                <p>20000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button 
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px]">
+                                <img src="./2.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">سیب زمینی سرخ کرده ویژه</p>
+                                <p>25000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px] items-center">
+                                <img src="./2.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">سیب زمینی سرخ کرده</p>
+                                <p>20000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[115px] max-h-[115px] ">
+                                <img src="./3.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">نوشابه رژیمی</p>
+                                <p>6000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[115px] max-h-[115px]">
+                                <img src="./3.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">نوشابه </p>
+                                <p>5000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px]">
+                                <img src="./5.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">سالاد فصل </p>
+                                <p>8000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="food h-[130px]  bg-white rounded-[10px] p-[15px]">
+                        <div class="w-[100%] h-[100%] flex justify-around items-center gap-[20px]">
+                            <div class="min-w-[100px] max-w-[100px] min-h-[80px] max-h-[80px]">
+                                <img src="./4.PNG" class="w-[100%] h-[100%]">
+                            </div>
+                            <div class="w-[35%] flex flex-col justify-between items-start gap-[10px] ">
+                                <p class="no-wrap">سالاد سزار</p>
+                                <p>25000 تومان</p>
+                                <div class="flex flex-row justify-start px-0 mx-0  gap-0">
+                                    <button
+                                        class="w-[25px] h-[25px] pl-0 ml-0 flex justify-center items-center bg-[#9E1010] rounded-tr-[5px] rounded-br-[5px] ">
+                                        <svg class="font-bold" xmlns="http://www.w3.org/2000/svg" width="95%"
+                                            height="95%" fill="white" class="bi bi-plus" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                        </svg>
+                                    </button>
+                                    <p id="number-food"
+                                        class="w-[25px] h-[25px] px-0 mx-0 flex justify-center items-center bg-[#F0F8FF]">
+                                        0
+                                    </p>
+                                    <button
+                                        class="w-[25px] h-[25px] pr-0 mr-0 flex justify-center items-center bg-[#D1D5DB] rounded-tl-[5px] rounded-bl-[5px]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="95%" height="95%" fill="white"
+                                            class="bi bi-dash" viewBox="0 0 16 16">
+                                            <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class=" w-[35%] flex flex-col justify-between items-end gap-[10px] ">
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class="invisible cost-sum">0 تومان</p>
+                                </div>
+                                <div>
+                                    <p class=" cost-sum">0 تومان</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pay" class=" w-[400px]  h-[350px] h-[100%] mt-[30px] ">
+            <div
+                class="h-[349px] w-full bg-[#F0F8FF] inline-block  2xl:w-[349px] 2xl:absolute 2xl:left-[80px] 2xl:top-[30px] p-[15px] rounded-[20px]">
+                <div class=" flex flex-col justify-start gap-[10px] ">
+                    <div class="flex justify-between items-center">
+                        <p >جمع کل سفارشات:</p>
+                        <p id="total-order-pay">0 تومان</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p >حق سرویس و کارمزد:</p>
+                        <p id="service-right">0 تومان</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <p>تخفیف:</p>
+                        <p id="discount-item">0 تومان</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <input id="discount-code" placeholder="کد تخفیف" class="w-[100%] h-[40px] pr-[5px] pl-0 ml-0">
+                        <button onclick="discountBtnClickHandler()"
+                            class="w-[50px] h-[40px] bg-[#9E1010] rounded-tl-[5px] rounded-bl-[5px] pr-0 mr-0 flex justify-center items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="white"
+                                class="bi bi-check-lg " viewBox="0 0 16 16">
+                                <path
+                                    d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="w-[100%]  flex flex-col mt-[60px] gap-[10px] ">
+                    <div class="flex justify-between items-center bg-[#FFC72C] h-[35px]">
+                        <p>مبلغ قابل پرداخت:</p>
+                        <p id="cost-pay-able">0 تومان</p>
+                    </div>
+                    <div class="h-[50px] text-center bg-[#D1D5DB] py-[10px]">
+                        <button>ثبت سفارش</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-register-order-Wrapper"
+        class="hidden w-[100vw] h-[100vh] fixed top-0 left-0 opacit bg-white bg-opacity-[40%] items-center justify-center">
+        <button onclick="registerOrderBtnClickHandler()" class="w-full max-w-[500px] h-[200px] rounded-[8px] bg-white flex flex-col justify-evenly items-center ">
+        سفارش شما با موفقیت ثبت شد.
+            <button   class="w-[120px] h-[60px] rounded-[5px] bg-[#9E1010] text-white">بستن</button>
+        </button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

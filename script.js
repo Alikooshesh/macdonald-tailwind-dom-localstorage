@@ -1,33 +1,61 @@
 const foodListWrapper = document.getElementById("food-item")
+const totalOrderPay = document.getElementById("total-order-pay")
+const serviceRight = document.getElementById("service-right")
+const discountItem = document.getElementById("discount-item")
+
+const discountCodeInput = document.getElementById("discount-code")
 
 const foodMenu = [
     {
         id : 1,
         name : "همبرگر مخصوص",
-        price : "10000",
+        price : 10000,
         image : "file:///Users/alikooshesh/Desktop/untitled%20folder/1.PNG"
     },
     {
         id : 2,
         name : "همبرگر معمولی",
-        price : "8000",
+        price : 8000,
         image : "file:///Users/alikooshesh/Desktop/untitled%20folder/1.PNG"
     },
     {
         id : 3,
         name : "همبرگر مخصوص با قارچ و پنیر",
-        price : "20000",
+        price : 20000,
         image : "file:///Users/alikooshesh/Desktop/untitled%20folder/1.PNG"
     },
     {
         id : 4,
-        name : "سالاد سزار        ",
-        price : "25000",
+        name : "سالاد سزار",
+        price : 25000,
         image : "file:///Users/alikooshesh/Desktop/untitled%20folder/4.PNG"
     }
 ]
 
+const discountCodes = [
+    {
+        code : "vip",
+        percent : 20
+    },
+    {
+        code : "golden",
+        percent : 5
+    }
+]
+
 let buyCart = []
+
+function syncLocalStorageToBuyCart(){
+    const temp = localStorage.getItem("buyCart")
+    const parseData = JSON.parse(temp)
+    buyCart = parseData
+}
+
+syncLocalStorageToBuyCart()
+
+function syncBuyCartToLocalStorage(){
+    localStorage.setItem("buyCart",JSON.stringify(buyCart))
+}
 
 function addFoodToCart(foodId){
     const foodIndexFinder = buyCart.findIndex(item => item.foodId == foodId)
@@ -40,6 +68,7 @@ function addFoodToCart(foodId){
         buyCart[foodIndexFinder].count +=1
     }
 
+    syncBuyCartToLocalStorage()
     foodWrapperRender()
 }
 
@@ -54,6 +83,7 @@ function removeFoodFromCard(foodId){
         }
     }
 
+    syncBuyCartToLocalStorage()
     foodWrapperRender()
 }
 
@@ -112,6 +142,42 @@ function foodWrapperRender(){
 
         foodListWrapper.innerHTML = finalFoodWrapperInnerHtml
     })
+
+    billBoxRender()
 }
 
 foodWrapperRender()
+
+function calcTotalPrice(){
+    let totalPrice = 0
+    buyCart.forEach(item =>{
+        const foodPrice = foodMenu.find(food => food.id == item.foodId)?.price ?? 0
+        totalPrice += foodPrice*item.count
+    })
+
+    return totalPrice
+}
+
+function calcTaxService(){
+    const totalPriceBeforeTax = calcTotalPrice()
+    let taxPrice = totalPriceBeforeTax * 9 / 100
+
+    return taxPrice
+}
+
+function calcDiscount(){
+    const codeVal = discountCodeInput.value
+    const discountPercent = discountCodes.find(item => item.code == codeVal)?.percent ?? 0
+
+    const totalPrice = calcTotalPrice()
+
+    discountItem.innerHTML = `${totalPrice * discountPercent/100} تومان`
+
+    return totalPrice * discountPercent/100
+    
+}
+
+function billBoxRender(){
+    totalOrderPay.innerHTML = `${calcTotalPrice()} تومان`
+    serviceRight.innerHTML = `${calcTaxService()} تومان`
+}
